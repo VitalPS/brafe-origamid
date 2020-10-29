@@ -1,3 +1,11 @@
+/* 
+Breakpoints 
+> 960px
+960px > 739px
+739px >
+
+*/
+
 /* Reset */
 
 * {
@@ -55,6 +63,14 @@ Como a logo e o menu contem float, se não colocarmos o clear:both (elimina o fl
   font-size: 1.125rem;
 }
 
+@media (max-width: 739px) {
+  .menu-nav {
+    float: none;
+    clear: both;
+    margin-top: 40px;
+  }
+}
+
 /* Intro */
 
 .intro {
@@ -84,6 +100,12 @@ Como a logo e o menu contem float, se não colocarmos o clear:both (elimina o fl
 .intro p {
   font-style: italic;
   font-size: 1.125rem; /* 1rem=16/16  1.125rem=18/16*/
+}
+
+@media (max-width: 739px) {
+  .intro {
+    padding: 80px 0;
+  }
 }
 
 /* Sobre */
@@ -146,6 +168,27 @@ Como a logo e o menu contem float, se não colocarmos o clear:both (elimina o fl
   text-align: center;
   margin: 20px auto;
   max-width: 460px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .sobre-container {
+    max-width: 720px; /*740px - 10px margem - 10 px margem*/
+  }
+
+  .sobre-item {
+    width: 340px; /* 720px / 2 imagens = 360px - 10px de margem - 10px de margem*/
+  }
+}
+
+@media (max-width: 739px) {
+  .sobre-container {
+    max-width: 300px;
+  }
+
+  .sobre-item {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
 
 /* Produtos */
@@ -221,6 +264,26 @@ h2.produtos-mineiro::before {
   text-align: center;
   padding: 15px 0;
   margin: 20px auto 0 auto;
+}
+
+@media (min-width: 740px) and (max-width: 960px) {
+  .produtos-container {
+    width: 720px;
+  }
+
+  .produtos-item {
+    width: 220px;
+  }
+}
+
+@media (max-width: 739px) {
+  .produtos-container {
+    max-width: 300px;
+  }
+
+  .produtos-item {
+    margin: 0 auto 20px auto;
+  }
 }
 
 /* locais */
